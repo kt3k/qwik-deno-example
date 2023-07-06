@@ -23,7 +23,7 @@ jobs:
           node-version: lts/*
 
       - name: Build step
-        run: npm install && npm run build
+        run: npm install && npm run build && rm -rf node_modules
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
